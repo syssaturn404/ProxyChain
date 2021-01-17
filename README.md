@@ -11,7 +11,7 @@ Jenis proxy yang di support adalah SOCK4, SOCK5, HTTP(S), maupun TOR.
 ## How to setup for proxychain ?
 ```
 Fedora, CentOS, Redhat distribusi can make install :
-root@fedora~#: su -c "yum install proxychains"
+root@fedora:~# su -c "yum install proxychains"
 > bila distro yang anda gunakan belum memiliki proxychains di repository
 bisa di install dengan mendownload source code dari website proxychain.
 file configurasinya ada di dalam dir /etc/proxychains.conf.
@@ -19,11 +19,11 @@ Contoh kita menggunakan proxy SOCK5 ip 192.168.56.2
 dan port 1080 maka dibagian paling bawah proxychains.conf tambahkan
 socks5  192.168.56.2 1080, untuk penggunaan proxychains formatnya
 proxychains namaaplikasi contoh menjalankan aplikasi whois
-root@fedora~#: proxychains whois linux.com
+root@fedora:~# proxychains whois linux.com
 
 Kali Linux can make install :
-root@kali~#: sudo apt-get install proxychains
-root@kali~#: locate proxychains
+root@kali:~# sudo apt-get install proxychains
+root@kali:~# locate proxychains
 /etc/proxychains.conf
 /etc/alternatives/proxychains
 /etc/alternatives/proxychains.1.gz
@@ -38,14 +38,14 @@ root@kali~#: locate proxychains
 /usr/share/doc/proxychains
 
 > config proxychains berada di /etc, kita buka menggunakan gedit :
-root@kali~#: sudo gedit /etc/proxychains.conf
+root@kali:~# sudo gedit /etc/proxychains.conf
 set di paling bawah, sama seperti diatas, tambahkan socksnya
 lalu kita gunakan proxy chains, formatnya sama seperti diatas
 contoh kita menjalankan aplikasi whois 
-root@kali~#: proxychains whois linux.com
+root@kali:~# proxychains whois linux.com
 
-Output kurang lebih sama, seperti diatas~:
-roxyChains-3.1 (http://proxychains.sf.net)
+Output kurang lebih sama, seperti diatas:~
+proxyChains-3.1 (http://proxychains.sf.net)
 |DNS-request| whois.verisign-grs.com 
 |S-chain|-<>-127.0.0.1:9050-<><>-4.2.2.2:53-<><>-OK
 |DNS-response| whois.verisign-grs.com is 192.30.45.30
